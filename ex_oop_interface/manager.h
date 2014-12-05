@@ -3,6 +3,7 @@
 #include "interface.h"
 #include "interface_a.h"
 #include "interface_b.h"
+#include "interface_cb.h"
 #include "common.h"
 
 enum INTERFACE {
@@ -11,4 +12,5 @@ enum INTERFACE {
 };
 
 struct interface_c* mgr_getInterface(enum INTERFACE i);
+void mgr_setCb();
 #endif

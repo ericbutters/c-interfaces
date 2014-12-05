@@ -1,8 +1,14 @@
 #include "manager.h"
 #include "common.h"
 
+void main_cb(struct interface_c *mgrcb) {
+  FTAG("MCBK")
+  printf("%s: got mgr callback, set interface to %s\n",__func__,mgrcb->name);;
+}
+
 int main () {
   struct interface_c *myint;
+  mgr_setCb(&main_cb);
   myint = mgr_getInterface(INT_B);
   if(NULL == myint)
     goto error;
@@ -19,6 +25,6 @@ int main () {
   return 1;
   
 error:
-  printf("Exit with error \n");
+  printf("Could not find interface. Exit with error \n");
   return 0;;
 }
