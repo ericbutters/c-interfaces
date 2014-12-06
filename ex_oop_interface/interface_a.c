@@ -7,6 +7,6 @@ struct interface_c inta = {
 };
 
 void sayHello_A(void){
-  FTAG("INTA");
+  FTAG_C_ORANGE("INTA");
   return;
 }

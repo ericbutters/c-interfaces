@@ -7,6 +7,6 @@ struct interface_c intb = {
 };
 
 void sayHello_B(void){
-  FTAG("INTB");
+  FTAG_C_BLUE("INTB");
   return;
 }
